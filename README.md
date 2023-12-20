@@ -2,7 +2,7 @@
 
 This repository contains code for a web app that allows users to input an image of a flower and get a prediction on what type of flower it is from a machine learning model. The app is built using the [Gradio](https://github.com/gradio-app/gradio) framework. It takes an image as user input (user uploads an image from their computer) and outputs flower types with top three classification scores. The machine learning model is trained to predict flowers occuring in the United Kingdom.
 
-The live app can be found here: [flower-classification.serve.scilifelab.se](https://flower-classificationn.serve.scilifelab.se/).
+The live app can be found here: [flower-classification.serve.scilifelab.se](https://flower-classification.serve.scilifelab.se/).
 
 ## Model behind the app
 
