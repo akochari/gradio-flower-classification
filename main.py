@@ -54,7 +54,7 @@ ref = """
 interface = gr.Interface(fn=predict,
                          inputs=gr.Image(type="pil"),
                          outputs=gr.Label(num_top_classes=3),
-                         allow_flagging="never",
+                         flagging_mode="never",
                          title=title,
                          description=description, 
                          article=ref,
@@ -66,4 +66,4 @@ interface = gr.Interface(fn=predict,
              )
 
 # Launching Gradio
-interface.launch(server_name="0.0.0.0", server_port=8080)
+interface.launch(server_name="0.0.0.0", server_port=7860)

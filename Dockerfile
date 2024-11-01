@@ -26,18 +26,14 @@ RUN python3 -m pip install torch torchvision torchaudio --index-url https://down
 
 # Copy all files that are needed for your app to run with the directory structure as your files expect
 COPY main.py $HOME/app/main.py
-COPY start-script.sh $HOME/app/start-script.sh
 COPY assets/example_images/ $HOME/app/assets/example_images/
 COPY assets/flower_dataset_labels.txt $HOME/app/assets/flower_dataset_labels.txt
 # Because the model file is too large we download it separately and put in the correct location
 ADD https://nextcloud.dc.scilifelab.se/s/GSf2g5CAFxBPtMN/download $HOME/app/assets/flower_model_vgg19.pth
 
 # Give access to appripriate files and folders to the created user
-RUN chmod +x start-script.sh \
-    && chown -R $USER:$USER $HOME \
+RUN chown -R $USER:$USER $HOME \
     && rm -rf /var/lib/apt/lists/*
 
 USER $USER
-EXPOSE 8080
-
-ENTRYPOINT ["./start-script.sh"]
+EXPOSE 7860

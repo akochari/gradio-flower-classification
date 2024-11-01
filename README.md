@@ -4,6 +4,12 @@ This repository contains code for a web app that allows users to input an image 
 
 The live app can be found here: [flower-classification.serve.scilifelab.se](https://flower-classification.serve.scilifelab.se/).
 
+To run this app using Docker locally you can run the following command:
+
+```
+docker run --rm -it -p 7860:7860 ghcr.io/scilifelabdatacentre/gradio-flower-classification:<version here> python main.py
+```
+
 ## Model behind the app
 
 The task of the machine learning problem was to predict the correct flower category from an image. Information about the model:
