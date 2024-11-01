@@ -7,7 +7,7 @@ The live app can be found here: [flower-classification.serve.scilifelab.se](http
 To run this app using Docker locally you can run the following command:
 
 ```
-docker run --rm -it -p 7860:7860 ghcr.io/scilifelabdatacentre/gradio-flower-classification:<version here> python main.py
+docker run --rm -it -p 7860:7860 ghcr.io/scilifelabdatacentre/gradio-flower-classification:<version here>
 ```
 
 ## Model behind the app

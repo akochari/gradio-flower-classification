@@ -37,3 +37,6 @@ RUN chown -R $USER:$USER $HOME \
 
 USER $USER
 EXPOSE 7860
+
+ENV GRADIO_SERVER_NAME="0.0.0.0"
+CMD ["python", "main.py"]
